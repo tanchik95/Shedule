@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SLScheduleListTimerEndTableViewCell" rowHeight="56" id="KGk-i7-Jjw" customClass="SLScheduleListTimerEndTableViewCell" customModule="Schedule" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l09-nn-odT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WF-QB-8rB">
+                                <rect key="frame" x="10" y="17.5" width="29.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ALY-F0-0k0">
+                                <rect key="frame" x="-8" y="-80" width="320" height="216"/>
+                                <connections>
+                                    <action selector="timeChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="br9-KB-Xb0"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ALY-F0-0k0" secondAttribute="trailing" constant="8" id="HOs-iJ-aHw"/>
+                            <constraint firstItem="ALY-F0-0k0" firstAttribute="centerY" secondItem="l09-nn-odT" secondAttribute="centerY" id="QB3-gL-ZdN"/>
+                            <constraint firstItem="2WF-QB-8rB" firstAttribute="centerY" secondItem="l09-nn-odT" secondAttribute="centerY" id="Rgs-go-Zb9"/>
+                            <constraint firstItem="2WF-QB-8rB" firstAttribute="leading" secondItem="l09-nn-odT" secondAttribute="leading" constant="10" id="wTr-wa-kVC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="l09-nn-odT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RS4-Zh-nsV"/>
+                    <constraint firstAttribute="trailing" secondItem="l09-nn-odT" secondAttribute="trailing" id="Umb-QL-BGZ"/>
+                    <constraint firstItem="l09-nn-odT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aNK-8G-lXR"/>
+                    <constraint firstAttribute="bottom" secondItem="l09-nn-odT" secondAttribute="bottom" id="tzV-yf-gCC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="timerEnd" destination="ALY-F0-0k0" id="Spi-kW-tgh"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="156.69642857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarItem" id="gTV-IL-0wX" customClass="SLParchmentScreenCollectionViewCell" customModule="Schedule" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="74"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTG-7g-Jm4">
+                        <rect key="frame" x="0.0" y="0.0" width="76" height="69"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mv5-eo-smV">
+                                <rect key="frame" x="24" y="7" width="27" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" name="Application Badge Label Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4z-qL-g7K">
+                                <rect key="frame" x="16.5" y="43" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Application Badge Label Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="Mv5-eo-smV" firstAttribute="top" secondItem="MTG-7g-Jm4" secondAttribute="top" constant="7" id="BH3-LH-fu9"/>
+                            <constraint firstItem="Mv5-eo-smV" firstAttribute="centerX" secondItem="MTG-7g-Jm4" secondAttribute="centerX" id="Igb-7F-Mb6"/>
+                            <constraint firstAttribute="bottom" secondItem="V4z-qL-g7K" secondAttribute="bottom" constant="5" id="l5H-wf-QhE"/>
+                            <constraint firstItem="V4z-qL-g7K" firstAttribute="centerX" secondItem="MTG-7g-Jm4" secondAttribute="centerX" id="rrQ-MD-J7U"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="MTG-7g-Jm4" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" id="2Gk-jm-J61"/>
+                <constraint firstItem="MTG-7g-Jm4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FL4-fP-myF"/>
+                <constraint firstItem="MTG-7g-Jm4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xz3-nR-9sJ"/>
+                <constraint firstAttribute="bottom" secondItem="MTG-7g-Jm4" secondAttribute="bottom" constant="5" id="vru-Wh-u0e"/>
+            </constraints>
+            <size key="customSize" width="75" height="74"/>
+            <connections>
+                <outlet property="backgraundDate" destination="MTG-7g-Jm4" id="tQM-Oa-7pU"/>
+                <outlet property="dateLabel" destination="V4z-qL-g7K" id="tyx-8u-J7Q"/>
+                <outlet property="dayWeekLabel" destination="Mv5-eo-smV" id="OoF-JG-GKL"/>
+            </connections>
+            <point key="canvasLocation" x="177.536231884058" y="180.80357142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Application Badge Label Color">
+            <color red="0.2669999897480011" green="0.3449999988079071" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

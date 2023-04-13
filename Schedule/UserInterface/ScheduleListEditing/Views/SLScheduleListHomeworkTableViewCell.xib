@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SLScheduleListHomeworkTableViewCell" rowHeight="67" id="KGk-i7-Jjw" customClass="SLScheduleListHomeworkTableViewCell" customModule="Schedule" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMn-iR-Vnm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xjz-Jx-atR" customClass="SLTextView" customModule="Schedule" customModuleProvider="target">
+                                <rect key="frame" x="10" y="8" width="313" height="51"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="EY6-zu-zpq"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="2Vl-7u-Klk"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN7-KI-Mg5">
+                                <rect key="frame" x="340.5" y="22.5" width="26.5" height="22"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="photo.on.rectangle.angled" catalog="system"/>
+                                <connections>
+                                    <action selector="addPhotoAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QMH-g5-M0N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Xjz-Jx-atR" secondAttribute="bottom" constant="8" id="Gfh-a0-qqa"/>
+                            <constraint firstItem="NN7-KI-Mg5" firstAttribute="centerY" secondItem="PMn-iR-Vnm" secondAttribute="centerY" id="JGA-st-Ybk"/>
+                            <constraint firstAttribute="trailing" secondItem="NN7-KI-Mg5" secondAttribute="trailing" constant="8" id="Jll-s7-Uc4"/>
+                            <constraint firstItem="Xjz-Jx-atR" firstAttribute="top" secondItem="PMn-iR-Vnm" secondAttribute="top" constant="8" id="L6e-v0-Qzv"/>
+                            <constraint firstAttribute="trailing" secondItem="Xjz-Jx-atR" secondAttribute="trailing" constant="52" id="LMD-py-qfu"/>
+                            <constraint firstItem="Xjz-Jx-atR" firstAttribute="centerY" secondItem="PMn-iR-Vnm" secondAttribute="centerY" id="Lp9-xl-ETP"/>
+                            <constraint firstItem="Xjz-Jx-atR" firstAttribute="leading" secondItem="PMn-iR-Vnm" secondAttribute="leading" constant="10" id="sRI-Er-LV6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PMn-iR-Vnm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="R5y-fQ-fhD"/>
+                    <constraint firstAttribute="trailing" secondItem="PMn-iR-Vnm" secondAttribute="trailing" id="RyL-yu-DET"/>
+                    <constraint firstItem="PMn-iR-Vnm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="c4e-dS-9XN"/>
+                    <constraint firstAttribute="bottom" secondItem="PMn-iR-Vnm" secondAttribute="bottom" id="e9r-Nh-eWB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addPhotoOutlet" destination="NN7-KI-Mg5" id="gYV-VU-Ckf"/>
+                <outlet property="textView" destination="Xjz-Jx-atR" id="Ep8-J3-m7G"/>
+            </connections>
+            <point key="canvasLocation" x="177.536231884058" y="160.37946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

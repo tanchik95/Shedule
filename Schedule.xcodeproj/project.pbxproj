@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16A7B24AE1F4C3AB200254F6 /* Pods_Schedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C98799B2B5D869F4A0974A0 /* Pods_Schedule.framework */; };
+		5427E43F25935FC3008A0183 /* SLSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427E43E25935FC3008A0183 /* SLSubject.swift */; };
+		5427E443259361FA008A0183 /* SLSubjectManagerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427E442259361FA008A0183 /* SLSubjectManagerObject.swift */; };
+		5427E44625936E5F008A0183 /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427E44525936E5F008A0183 /* NSManagedObjectContext.swift */; };
+		5427E44925936EEE008A0183 /* NSManagedObjectContext + SLSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427E44825936EEE008A0183 /* NSManagedObjectContext + SLSubject.swift */; };
+		5427E470259610B7008A0183 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427E46F259610B7008A0183 /* CoreDataManager.swift */; };
+		5427E47625967383008A0183 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427E47525967383008A0183 /* UIView+Animation.swift */; };
+		546A6D56256436A100ACAE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6D55256436A100ACAE18 /* AppDelegate.swift */; };
+		546A6D58256436A100ACAE18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6D57256436A100ACAE18 /* SceneDelegate.swift */; };
+		546A6D5D256436A100ACAE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546A6D5B256436A100ACAE18 /* Main.storyboard */; };
+		546A6D60256436A100ACAE18 /* Schedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546A6D5E256436A100ACAE18 /* Schedule.xcdatamodeld */; };
+		546A6D65256436A400ACAE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546A6D63256436A400ACAE18 /* LaunchScreen.storyboard */; };
+		546A6D952565672C00ACAE18 /* SLCalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6D942565672C00ACAE18 /* SLCalendarItem.swift */; };
+		546A6D9A25657D4400ACAE18 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6D9925657D4400ACAE18 /* Date+Formatter.swift */; };
+		546A6DA12565826300ACAE18 /* SLParchmentScreenSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6D9F2565826300ACAE18 /* SLParchmentScreenSegmentViewController.swift */; };
+		546A6DA7256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6DA5256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.swift */; };
+		546A6DA8256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546A6DA6256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.xib */; };
+		546A6DAB2565881400ACAE18 /* SLParchmentScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6DAA2565881400ACAE18 /* SLParchmentScreenViewController.swift */; };
+		546A6DBB2566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6DB92566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.swift */; };
+		546A6DBC2566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546A6DBA2566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.xib */; };
+		546A6DF9256AE9C300ACAE18 /* SLScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6DF8256AE9C300ACAE18 /* SLScheduleListViewController.swift */; };
+		546A6DFD256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6DFB256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.swift */; };
+		546A6DFE256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546A6DFC256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.xib */; };
+		546A6E07256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6E05256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.swift */; };
+		546A6E08256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546A6E06256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.xib */; };
+		546A6E0E256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6E0C256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.swift */; };
+		546A6E0F256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546A6E0D256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.xib */; };
+		546A6E13256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6E11256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.swift */; };
+		546A6E14256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546A6E12256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.xib */; };
+		546A6E1E256BB09800ACAE18 /* SLCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6E1D256BB09800ACAE18 /* SLCalendarViewController.swift */; };
+		546A6E3C256E638400ACAE18 /* SLScheduleEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6E3B256E638300ACAE18 /* SLScheduleEditor.swift */; };
+		546A6E4A256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6E48256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.swift */; };
+		546A6E4B256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546A6E49256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.xib */; };
+		546A6E52256FDA3600ACAE18 /* SLTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6E51256FDA3600ACAE18 /* SLTextView.swift */; };
+		546A6E952578133800ACAE18 /* SLScheduleListAddPhotoHomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546A6E942578133800ACAE18 /* SLScheduleListAddPhotoHomeworkViewController.swift */; };
+		54A48E9E257B8FF100236D76 /* UIColors+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A48E9D257B8FF100236D76 /* UIColors+Application.swift */; };
+		54A48EA6257B955D00236D76 /* Default.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54A48EA5257B955D00236D76 /* Default.xcassets */; };
+		54A48EA9257B963F00236D76 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54A48EA8257B963F00236D76 /* AppIcon.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A88FAB57A57683B37A7FE00 /* Pods-Schedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Schedule.release.xcconfig"; path = "Target Support Files/Pods-Schedule/Pods-Schedule.release.xcconfig"; sourceTree = "<group>"; };
+		4C98799B2B5D869F4A0974A0 /* Pods_Schedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Schedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5427E43E25935FC3008A0183 /* SLSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLSubject.swift; sourceTree = "<group>"; };
+		5427E442259361FA008A0183 /* SLSubjectManagerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLSubjectManagerObject.swift; sourceTree = "<group>"; };
+		5427E44525936E5F008A0183 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
+		5427E44825936EEE008A0183 /* NSManagedObjectContext + SLSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext + SLSubject.swift"; sourceTree = "<group>"; };
+		5427E46F259610B7008A0183 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5427E47525967383008A0183 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		546A6D52256436A100ACAE18 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		546A6D55256436A100ACAE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		546A6D57256436A100ACAE18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		546A6D5C256436A100ACAE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		546A6D5F256436A100ACAE18 /* Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Schedule.xcdatamodel; sourceTree = "<group>"; };
+		546A6D64256436A400ACAE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		546A6D66256436A400ACAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546A6D942565672C00ACAE18 /* SLCalendarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLCalendarItem.swift; sourceTree = "<group>"; };
+		546A6D9925657D4400ACAE18 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		546A6D9F2565826300ACAE18 /* SLParchmentScreenSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLParchmentScreenSegmentViewController.swift; sourceTree = "<group>"; };
+		546A6DA5256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLParchmentScreenSegmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		546A6DA6256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLParchmentScreenSegmentCollectionViewCell.xib; sourceTree = "<group>"; };
+		546A6DAA2565881400ACAE18 /* SLParchmentScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLParchmentScreenViewController.swift; sourceTree = "<group>"; };
+		546A6DB92566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLParchmentScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		546A6DBA2566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLParchmentScreenCollectionViewCell.xib; sourceTree = "<group>"; };
+		546A6DF8256AE9C300ACAE18 /* SLScheduleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLScheduleListViewController.swift; sourceTree = "<group>"; };
+		546A6DFB256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLScheduleListItemTableViewCell.swift; sourceTree = "<group>"; };
+		546A6DFC256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLScheduleListItemTableViewCell.xib; sourceTree = "<group>"; };
+		546A6E05256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLScheduleListColorTableViewCell.swift; sourceTree = "<group>"; };
+		546A6E06256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLScheduleListColorTableViewCell.xib; sourceTree = "<group>"; };
+		546A6E0C256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLScheduleListTimerStartTableViewCell.swift; sourceTree = "<group>"; };
+		546A6E0D256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLScheduleListTimerStartTableViewCell.xib; sourceTree = "<group>"; };
+		546A6E11256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLScheduleListTimerEndTableViewCell.swift; sourceTree = "<group>"; };
+		546A6E12256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLScheduleListTimerEndTableViewCell.xib; sourceTree = "<group>"; };
+		546A6E1D256BB09800ACAE18 /* SLCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLCalendarViewController.swift; sourceTree = "<group>"; };
+		546A6E3B256E638300ACAE18 /* SLScheduleEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLScheduleEditor.swift; sourceTree = "<group>"; };
+		546A6E48256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLScheduleListHomeworkTableViewCell.swift; sourceTree = "<group>"; };
+		546A6E49256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLScheduleListHomeworkTableViewCell.xib; sourceTree = "<group>"; };
+		546A6E51256FDA3600ACAE18 /* SLTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLTextView.swift; sourceTree = "<group>"; };
+		546A6E942578133800ACAE18 /* SLScheduleListAddPhotoHomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLScheduleListAddPhotoHomeworkViewController.swift; sourceTree = "<group>"; };
+		54A48E9D257B8FF100236D76 /* UIColors+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Application.swift"; sourceTree = "<group>"; };
+		54A48EA5257B955D00236D76 /* Default.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Default.xcassets; sourceTree = "<group>"; };
+		54A48EA8257B963F00236D76 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		7152FF5AA3423443697E077D /* Pods-Schedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Schedule.debug.xcconfig"; path = "Target Support Files/Pods-Schedule/Pods-Schedule.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		546A6D4F256436A100ACAE18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16A7B24AE1F4C3AB200254F6 /* Pods_Schedule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		546A6D49256436A100ACAE18 = {
+			isa = PBXGroup;
+			children = (
+				546A6D54256436A100ACAE18 /* Schedule */,
+				546A6D53256436A100ACAE18 /* Products */,
+				546A6D87256452D500ACAE18 /* Pods */,
+				546A6D88256452DF00ACAE18 /* Frameworks */,
+				546A6D7C2564507900ACAE18 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		546A6D53256436A100ACAE18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D52256436A100ACAE18 /* Schedule.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		546A6D54256436A100ACAE18 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D55256436A100ACAE18 /* AppDelegate.swift */,
+				546A6D57256436A100ACAE18 /* SceneDelegate.swift */,
+				546A6D6F25644D9F00ACAE18 /* Utilites */,
+				546A6D7125644DD800ACAE18 /* Extentions */,
+				546A6D7025644DB900ACAE18 /* Log */,
+				546A6D7225644E1800ACAE18 /* UserDefaults */,
+				546A6D7325644E4C00ACAE18 /* UserInterface */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		546A6D6F25644D9F00ACAE18 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
+		546A6D7025644DB900ACAE18 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		546A6D7125644DD800ACAE18 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D9925657D4400ACAE18 /* Date+Formatter.swift */,
+				54A48E9D257B8FF100236D76 /* UIColors+Application.swift */,
+				5427E47525967383008A0183 /* UIView+Animation.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		546A6D7225644E1800ACAE18 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		546A6D7325644E4C00ACAE18 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				546A6DD7256AE36200ACAE18 /* ScheduleListEditing */,
+				546A6E2A256BDB3E00ACAE18 /* AddOnScheduleListEditing */,
+				546A6D7625644FAE00ACAE18 /* ScheduleList */,
+				546A6E18256BAF4D00ACAE18 /* Calendar */,
+				546A6D7425644F7200ACAE18 /* Storyboard */,
+				546A6D7A25644FEC00ACAE18 /* LaunchScreen */,
+				546A6D832564523300ACAE18 /* LegasyFiles */,
+				546A6D822564521C00ACAE18 /* SupportFiles */,
+				546A6D7F2564518900ACAE18 /* CoreDataFiles */,
+				546A6D7B2564503600ACAE18 /* Components */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		546A6D7425644F7200ACAE18 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D5B256436A100ACAE18 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		546A6D7625644FAE00ACAE18 /* ScheduleList */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D7925644FD300ACAE18 /* Models */,
+				546A6D7825644FCB00ACAE18 /* View */,
+				546A6D7725644FC000ACAE18 /* Controllers */,
+			);
+			path = ScheduleList;
+			sourceTree = "<group>";
+		};
+		546A6D7725644FC000ACAE18 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				546A6DAA2565881400ACAE18 /* SLParchmentScreenViewController.swift */,
+				546A6D9F2565826300ACAE18 /* SLParchmentScreenSegmentViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		546A6D7825644FCB00ACAE18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				546A6DB92566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.swift */,
+				546A6DBA2566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.xib */,
+				546A6DA5256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.swift */,
+				546A6DA6256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		546A6D7925644FD300ACAE18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D942565672C00ACAE18 /* SLCalendarItem.swift */,
+				546A6E3B256E638300ACAE18 /* SLScheduleEditor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		546A6D7A25644FEC00ACAE18 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D63256436A400ACAE18 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		546A6D7B2564503600ACAE18 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				546A6E4F256FD9DA00ACAE18 /* TextView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		546A6D7C2564507900ACAE18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54A48E99257B8F7800236D76 /* Assets */,
+				546A6D7E256450B900ACAE18 /* Localization */,
+				546A6D7D2564509100ACAE18 /* Themes */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		546A6D7D2564509100ACAE18 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		546A6D7E256450B900ACAE18 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		546A6D7F2564518900ACAE18 /* CoreDataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D5E256436A100ACAE18 /* Schedule.xcdatamodeld */,
+				546A6D80256451B200ACAE18 /* Entities */,
+				546A6D81256451ED00ACAE18 /* Extentions */,
+			);
+			path = CoreDataFiles;
+			sourceTree = "<group>";
+		};
+		546A6D80256451B200ACAE18 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5427E43E25935FC3008A0183 /* SLSubject.swift */,
+				5427E442259361FA008A0183 /* SLSubjectManagerObject.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		546A6D81256451ED00ACAE18 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				5427E44525936E5F008A0183 /* NSManagedObjectContext.swift */,
+				5427E44825936EEE008A0183 /* NSManagedObjectContext + SLSubject.swift */,
+				5427E46F259610B7008A0183 /* CoreDataManager.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		546A6D822564521C00ACAE18 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				546A6D66256436A400ACAE18 /* Info.plist */,
+				54A48EA8257B963F00236D76 /* AppIcon.xcassets */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		546A6D832564523300ACAE18 /* LegasyFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LegasyFiles;
+			sourceTree = "<group>";
+		};
+		546A6D87256452D500ACAE18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7152FF5AA3423443697E077D /* Pods-Schedule.debug.xcconfig */,
+				3A88FAB57A57683B37A7FE00 /* Pods-Schedule.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		546A6D88256452DF00ACAE18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C98799B2B5D869F4A0974A0 /* Pods_Schedule.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		546A6DD7256AE36200ACAE18 /* ScheduleListEditing */ = {
+			isa = PBXGroup;
+			children = (
+				546A6DDA256AE3A100ACAE18 /* Models */,
+				546A6DD9256AE39600ACAE18 /* Views */,
+				546A6DD8256AE38900ACAE18 /* Controllers */,
+			);
+			path = ScheduleListEditing;
+			sourceTree = "<group>";
+		};
+		546A6DD8256AE38900ACAE18 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				546A6DF8256AE9C300ACAE18 /* SLScheduleListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		546A6DD9256AE39600ACAE18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				546A6DFB256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.swift */,
+				546A6DFC256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.xib */,
+				546A6E48256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.swift */,
+				546A6E49256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.xib */,
+				546A6E05256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.swift */,
+				546A6E06256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.xib */,
+				546A6E0C256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.swift */,
+				546A6E0D256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.xib */,
+				546A6E11256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.swift */,
+				546A6E12256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		546A6DDA256AE3A100ACAE18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		546A6E18256BAF4D00ACAE18 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				546A6E1B256BAF7800ACAE18 /* Models */,
+				546A6E1A256BAF7200ACAE18 /* Views */,
+				546A6E19256BAF6100ACAE18 /* Controllers */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		546A6E19256BAF6100ACAE18 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				546A6E1D256BB09800ACAE18 /* SLCalendarViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		546A6E1A256BAF7200ACAE18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		546A6E1B256BAF7800ACAE18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		546A6E2A256BDB3E00ACAE18 /* AddOnScheduleListEditing */ = {
+			isa = PBXGroup;
+			children = (
+				546A6E2D256BDBAD00ACAE18 /* Models */,
+				546A6E2C256BDBA200ACAE18 /* Views */,
+				546A6E2B256BDB9300ACAE18 /* Controllers */,
+			);
+			path = AddOnScheduleListEditing;
+			sourceTree = "<group>";
+		};
+		546A6E2B256BDB9300ACAE18 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				546A6E942578133800ACAE18 /* SLScheduleListAddPhotoHomeworkViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		546A6E2C256BDBA200ACAE18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		546A6E2D256BDBAD00ACAE18 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		546A6E4F256FD9DA00ACAE18 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				546A6E50256FD9F000ACAE18 /* View */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		546A6E50256FD9F000ACAE18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				546A6E51256FDA3600ACAE18 /* SLTextView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54A48E99257B8F7800236D76 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				54A48EA5257B955D00236D76 /* Default.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		546A6D51256436A100ACAE18 /* Schedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546A6D69256436A400ACAE18 /* Build configuration list for PBXNativeTarget "Schedule" */;
+			buildPhases = (
+				366DF3DD5CE49135A1791104 /* [CP] Check Pods Manifest.lock */,
+				546A6D4E256436A100ACAE18 /* Sources */,
+				546A6D4F256436A100ACAE18 /* Frameworks */,
+				546A6D50256436A100ACAE18 /* Resources */,
+				5197EB97539BFFD27C482AEB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Schedule;
+			productName = Schedule;
+			productReference = 546A6D52256436A100ACAE18 /* Schedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		546A6D4A256436A100ACAE18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					546A6D51256436A100ACAE18 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 546A6D4D256436A100ACAE18 /* Build configuration list for PBXProject "Schedule" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 546A6D49256436A100ACAE18;
+			productRefGroup = 546A6D53256436A100ACAE18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				546A6D51256436A100ACAE18 /* Schedule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		546A6D50256436A100ACAE18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546A6DFE256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.xib in Resources */,
+				546A6DBC2566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.xib in Resources */,
+				54A48EA9257B963F00236D76 /* AppIcon.xcassets in Resources */,
+				546A6E14256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.xib in Resources */,
+				546A6D65256436A400ACAE18 /* LaunchScreen.storyboard in Resources */,
+				546A6DA8256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.xib in Resources */,
+				546A6E0F256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.xib in Resources */,
+				54A48EA6257B955D00236D76 /* Default.xcassets in Resources */,
+				546A6D5D256436A100ACAE18 /* Main.storyboard in Resources */,
+				546A6E08256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.xib in Resources */,
+				546A6E4B256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		366DF3DD5CE49135A1791104 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Schedule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5197EB97539BFFD27C482AEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Schedule/Pods-Schedule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Schedule/Pods-Schedule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Schedule/Pods-Schedule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		546A6D4E256436A100ACAE18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546A6E07256AEB0600ACAE18 /* SLScheduleListColorTableViewCell.swift in Sources */,
+				546A6E3C256E638400ACAE18 /* SLScheduleEditor.swift in Sources */,
+				546A6E13256AF36600ACAE18 /* SLScheduleListTimerEndTableViewCell.swift in Sources */,
+				5427E47625967383008A0183 /* UIView+Animation.swift in Sources */,
+				546A6DF9256AE9C300ACAE18 /* SLScheduleListViewController.swift in Sources */,
+				546A6DBB2566AA4000ACAE18 /* SLParchmentScreenCollectionViewCell.swift in Sources */,
+				546A6D9A25657D4400ACAE18 /* Date+Formatter.swift in Sources */,
+				5427E443259361FA008A0183 /* SLSubjectManagerObject.swift in Sources */,
+				5427E44925936EEE008A0183 /* NSManagedObjectContext + SLSubject.swift in Sources */,
+				546A6D56256436A100ACAE18 /* AppDelegate.swift in Sources */,
+				546A6E952578133800ACAE18 /* SLScheduleListAddPhotoHomeworkViewController.swift in Sources */,
+				546A6E4A256FD1CE00ACAE18 /* SLScheduleListHomeworkTableViewCell.swift in Sources */,
+				546A6D60256436A100ACAE18 /* Schedule.xcdatamodeld in Sources */,
+				546A6E52256FDA3600ACAE18 /* SLTextView.swift in Sources */,
+				546A6E0E256AF34A00ACAE18 /* SLScheduleListTimerStartTableViewCell.swift in Sources */,
+				546A6DAB2565881400ACAE18 /* SLParchmentScreenViewController.swift in Sources */,
+				54A48E9E257B8FF100236D76 /* UIColors+Application.swift in Sources */,
+				5427E44625936E5F008A0183 /* NSManagedObjectContext.swift in Sources */,
+				546A6DFD256AEAB900ACAE18 /* SLScheduleListItemTableViewCell.swift in Sources */,
+				5427E470259610B7008A0183 /* CoreDataManager.swift in Sources */,
+				546A6DA7256582DC00ACAE18 /* SLParchmentScreenSegmentCollectionViewCell.swift in Sources */,
+				546A6D952565672C00ACAE18 /* SLCalendarItem.swift in Sources */,
+				5427E43F25935FC3008A0183 /* SLSubject.swift in Sources */,
+				546A6E1E256BB09800ACAE18 /* SLCalendarViewController.swift in Sources */,
+				546A6D58256436A100ACAE18 /* SceneDelegate.swift in Sources */,
+				546A6DA12565826300ACAE18 /* SLParchmentScreenSegmentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		546A6D5B256436A100ACAE18 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				546A6D5C256436A100ACAE18 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		546A6D63256436A400ACAE18 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				546A6D64256436A400ACAE18 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		546A6D67256436A400ACAE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		546A6D68256436A400ACAE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		546A6D6A256436A400ACAE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7152FF5AA3423443697E077D /* Pods-Schedule.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64M33UXKSW;
+				INFOPLIST_FILE = "$(SRCROOT)/Schedule/UserInterface/SupportFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anikinatatyana.schedule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		546A6D6B256436A400ACAE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A88FAB57A57683B37A7FE00 /* Pods-Schedule.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64M33UXKSW;
+				INFOPLIST_FILE = "$(SRCROOT)/Schedule/UserInterface/SupportFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anikinatatyana.schedule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		546A6D4D256436A100ACAE18 /* Build configuration list for PBXProject "Schedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546A6D67256436A400ACAE18 /* Debug */,
+				546A6D68256436A400ACAE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546A6D69256436A400ACAE18 /* Build configuration list for PBXNativeTarget "Schedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546A6D6A256436A400ACAE18 /* Debug */,
+				546A6D6B256436A400ACAE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		546A6D5E256436A100ACAE18 /* Schedule.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				546A6D5F256436A100ACAE18 /* Schedule.xcdatamodel */,
+			);
+			currentVersion = 546A6D5F256436A100ACAE18 /* Schedule.xcdatamodel */;
+			path = Schedule.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 546A6D4A256436A100ACAE18 /* Project object */;
+}

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I8S-qe-HKg">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4BF-7P-5mI">
+            <objects>
+                <navigationController id="I8S-qe-HKg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Smo-Av-dJZ">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <outlet property="delegate" destination="Smo-Av-dJZ" id="Rym-AD-uWN"/>
+                        <segue destination="AWu-a4-prB" kind="relationship" relationship="rootViewController" id="Juo-Sh-L54"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6KR-JA-o6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="29"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="3RC-gn-5aH">
+            <objects>
+                <viewController id="yiU-85-TZO" customClass="SLCalendarViewController" customModule="Schedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ESO-W1-03c">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ACJ-Zw-kNu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6x2-BJ-Pw5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekC-px-d7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985.50724637681162" y="-686.38392857142856"/>
+        </scene>
+        <!--Parchment Screen View Controller-->
+        <scene sceneID="iU9-qj-wy2">
+            <objects>
+                <viewController storyboardIdentifier="SLParchmentScreenViewController" id="AWu-a4-prB" customClass="SLParchmentScreenViewController" customModule="Schedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQq-py-Zdk">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6X-NI-h0x">
+                                <rect key="frame" x="297" y="612" width="55" height="55"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Zwy-hi-4eF"/>
+                                    <constraint firstAttribute="width" constant="55" id="kh7-0U-cV1"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="pencil" catalog="system"/>
+                                <connections>
+                                    <segue destination="mcX-HA-znX" kind="presentation" identifier="SLScheduleListViewController" id="4tp-WR-CFp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rc8-9d-mT1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rc8-9d-mT1" firstAttribute="bottom" secondItem="d6X-NI-h0x" secondAttribute="bottom" constant="55" id="lQI-gc-gT5"/>
+                            <constraint firstItem="Rc8-9d-mT1" firstAttribute="trailing" secondItem="d6X-NI-h0x" secondAttribute="trailing" constant="38" id="sWq-KM-L5E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="smM-Rp-9ix">
+                        <barButtonItem key="leftBarButtonItem" title="Calendar" id="gab-Pm-7Xh">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="yiU-85-TZO" kind="show" id="JFW-xG-2wh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addItemButtom" destination="d6X-NI-h0x" id="zmn-XZ-JSL"/>
+                        <outlet property="calendarBarButtomItem" destination="gab-Pm-7Xh" id="gb4-Cm-LJz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Szm-J3-WrX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="29"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="1Lc-SS-bNN">
+            <objects>
+                <viewController id="1Zp-94-Svl" customClass="SLScheduleListViewController" customModule="Schedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eh5-MH-hXg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="v8y-0n-gaO">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.94901960784313721" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IYi-Tf-8wM">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="350" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IYi-Tf-8wM" id="vjZ-MZ-xxP">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Zp-94-Svl" id="fG2-Bc-l74"/>
+                                    <outlet property="delegate" destination="1Zp-94-Svl" id="j7v-UD-sHO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d1I-GQ-dmF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v8y-0n-gaO" firstAttribute="trailing" secondItem="d1I-GQ-dmF" secondAttribute="trailing" id="5zv-HS-Uhc"/>
+                            <constraint firstItem="d1I-GQ-dmF" firstAttribute="bottom" secondItem="v8y-0n-gaO" secondAttribute="bottom" constant="-34" id="GSR-Ok-mEL"/>
+                            <constraint firstItem="v8y-0n-gaO" firstAttribute="leading" secondItem="d1I-GQ-dmF" secondAttribute="leading" id="MIw-Vr-l6B"/>
+                            <constraint firstItem="v8y-0n-gaO" firstAttribute="top" secondItem="d1I-GQ-dmF" secondAttribute="top" constant="-56" id="g3s-Hr-e4q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="rhh-LC-i05">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="p4j-f3-WOP">
+                            <color key="tintColor" name="Application Current Parchment"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="1Zp-94-Svl" id="yzK-68-RqH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="EEr-W2-zTl">
+                            <color key="tintColor" name="Application Current Parchment"/>
+                            <connections>
+                                <action selector="doneAction:" destination="1Zp-94-Svl" id="Jok-M3-Y4C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="p4j-f3-WOP" id="xnv-Tc-3pp"/>
+                        <outlet property="doneButton" destination="EEr-W2-zTl" id="su7-Tr-lWv"/>
+                        <outlet property="tableView" destination="v8y-0n-gaO" id="4lA-8l-QhU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wys-SA-jR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844.6153846153845" y="772.74881516587675"/>
+        </scene>
+        <!--Schedule List Add Photo Homework View Controller-->
+        <scene sceneID="loK-z0-ur1">
+            <objects>
+                <viewController storyboardIdentifier="SLScheduleListAddPhotoHomeworkViewController" id="l9d-7d-AEJ" customClass="SLScheduleListAddPhotoHomeworkViewController" customModule="Schedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5X-yI-vci">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbS-ft-dbN">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iCl-Nw-Opu">
+                                        <rect key="frame" x="8" y="8" width="374" height="413"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="413" id="oZo-I0-TBy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYq-n5-L0c">
+                                        <rect key="frame" x="106.66666666666669" y="713" width="177" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.5478677904" blue="0.62212901610000004" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IhK-PP-IvM"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="pDT-Eh-tV8"/>
+                                        </constraints>
+                                        <state key="normal" title="Add photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addImageButton:" destination="l9d-7d-AEJ" eventType="touchUpInside" id="5ke-3V-4UC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="GYq-n5-L0c" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iCl-Nw-Opu" secondAttribute="bottom" constant="8" id="31Y-ce-R82"/>
+                                    <constraint firstAttribute="bottom" secondItem="GYq-n5-L0c" secondAttribute="bottom" constant="23" id="Hw4-O5-6oF"/>
+                                    <constraint firstItem="GYq-n5-L0c" firstAttribute="centerX" secondItem="kbS-ft-dbN" secondAttribute="centerX" id="NEM-4P-DGH"/>
+                                    <constraint firstItem="iCl-Nw-Opu" firstAttribute="top" secondItem="kbS-ft-dbN" secondAttribute="top" constant="8" id="li7-NE-vFM"/>
+                                    <constraint firstItem="iCl-Nw-Opu" firstAttribute="leading" secondItem="kbS-ft-dbN" secondAttribute="leading" constant="8" id="ma6-EQ-bpo"/>
+                                    <constraint firstAttribute="trailing" secondItem="iCl-Nw-Opu" secondAttribute="trailing" constant="8" id="rd5-lL-eTV"/>
+                                    <constraint firstItem="iCl-Nw-Opu" firstAttribute="centerX" secondItem="kbS-ft-dbN" secondAttribute="centerX" id="t5K-xL-tsk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C69-Td-EYX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kbS-ft-dbN" firstAttribute="top" secondItem="C69-Td-EYX" secondAttribute="top" id="X3w-ZP-gW4"/>
+                            <constraint firstItem="kbS-ft-dbN" firstAttribute="leading" secondItem="C69-Td-EYX" secondAttribute="leading" id="dvJ-lP-2Ph"/>
+                            <constraint firstItem="kbS-ft-dbN" firstAttribute="bottom" secondItem="C69-Td-EYX" secondAttribute="bottom" id="qkO-bk-fdX"/>
+                            <constraint firstItem="kbS-ft-dbN" firstAttribute="centerX" secondItem="g5X-yI-vci" secondAttribute="centerX" id="wgA-f3-wI4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rGH-J5-dj6"/>
+                    <connections>
+                        <outlet property="imageView" destination="iCl-Nw-Opu" id="DiY-gn-yTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMy-7O-9SH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828" y="1522"/>
+        </scene>
+        <!--Parchment Screen Segment View Controller-->
+        <scene sceneID="w3X-Cs-rvj">
+            <objects>
+                <viewController storyboardIdentifier="SLParchmentScreenSegmentViewController" id="4br-Mr-Je8" customClass="SLParchmentScreenSegmentViewController" customModule="Schedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BCZ-UO-WZI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6od-ZL-eB3">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="Vj1-Ug-Q2s">
+                                    <size key="itemSize" width="100" height="55"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="delegate" destination="4br-Mr-Je8" id="adT-qX-iHG"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dZk-ZH-lB8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6od-ZL-eB3" firstAttribute="trailing" secondItem="dZk-ZH-lB8" secondAttribute="trailing" id="4Ob-ls-QOX"/>
+                            <constraint firstItem="6od-ZL-eB3" firstAttribute="top" secondItem="BCZ-UO-WZI" secondAttribute="top" id="rHl-vL-7oN"/>
+                            <constraint firstItem="6od-ZL-eB3" firstAttribute="leading" secondItem="dZk-ZH-lB8" secondAttribute="leading" id="uBe-WX-kuF"/>
+                            <constraint firstAttribute="bottom" secondItem="6od-ZL-eB3" secondAttribute="bottom" id="y1u-MU-VUa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="6od-ZL-eB3" id="vWm-1a-ahd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhD-Ak-yNK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="28.794642857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bPT-NO-HxF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mcX-HA-znX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L2B-ey-inA">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1Zp-94-Svl" kind="relationship" relationship="rootViewController" id="E5e-tU-CkW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82B-dk-Y5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="773"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qDz-yr-7dF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YgM-en-Tht" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TMa-R2-JFf">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e55-ZJ-htM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="1522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="Application Current Parchment">
+            <color red="0.2669999897480011" green="0.3449999988079071" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
